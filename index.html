@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Period 3 Algebra - Practice Worksheet &amp; Basic Calculator</title>
+<link rel="icon" href="data:,">
+<script src="reader.js"></script>
+</head>
+<body>
+<div id="disguise-view">
+<h1>Math Homework Portal - Period 3 Algebra</h1>
+<p><strong>Teacher:</strong> Mr. Henderson &nbsp;|&nbsp; <strong>Topic:</strong> Linear Equations &amp; Basic Graphing &nbsp;|&nbsp; <strong>Date:</strong> October 14</p>
+<p>Use the basic calculator below to verify your arithmetic before submitting worksheet answers.</p>
+<hr>
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+<td colspan="4">
+<input type="text" id="calc-display" value="0" readonly style="width:100%;font-size:20px;text-align:right;font-family:monospace;">
+</td>
+</tr>
+<tr>
+<td><button type="button" class="calc-btn" data-val="C">C</button></td>
+<td><button type="button" class="calc-btn" data-val="CE">CE</button></td>
+<td><button type="button" class="calc-btn" data-val="%">%</button></td>
+<td><button type="button" class="calc-btn" data-val="/">/</button></td>
+</tr>
+<tr>
+<td><button type="button" class="calc-btn" data-val="7">7</button></td>
+<td><button type="button" class="calc-btn" data-val="8">8</button></td>
+<td><button type="button" class="calc-btn" data-val="9">9</button></td>
+<td><button type="button" class="calc-btn" data-val="*">*</button></td>
+</tr>
+<tr>
+<td><button type="button" class="calc-btn" data-val="4">4</button></td>
+<td><button type="button" class="calc-btn" data-val="5">5</button></td>
+<td><button type="button" class="calc-btn" data-val="6">6</button></td>
+<td><button type="button" class="calc-btn" data-val="-">-</button></td>
+</tr>
+<tr>
+<td><button type="button" class="calc-btn" data-val="1">1</button></td>
+<td><button type="button" class="calc-btn" data-val="2">2</button></td>
+<td><button type="button" class="calc-btn" data-val="3">3</button></td>
+<td><button type="button" class="calc-btn" data-val="+">+</button></td>
+</tr>
+<tr>
+<td><button type="button" class="calc-btn" data-val="0">0</button></td>
+<td><button type="button" class="calc-btn" data-val=".">.</button></td>
+<td><button type="button" class="calc-btn" data-val="+/-">&plusmn;</button></td>
+<td><button type="button" class="calc-btn" data-val="=">=</button></td>
+</tr>
+</table>
+<br>
+<fieldset>
+<legend>Homework Instructions</legend>
+<p>Please complete odd-numbered problems 1 through 23 on page 142 of your textbook. Show all intermediate steps in your binder. No scientific calculators allowed for section 3.2.</p>
+</fieldset>
+<br>
+<fieldset>
+<legend>Common Formulas Reference Sheet</legend>
+<ul>
+<li>Slope: m = (y2 - y1) / (x2 - x1)</li>
+<li>Slope-intercept form: y = mx + b</li>
+<li>Standard form: Ax + By = C</li>
+<li>Point-slope form: y - y1 = m(x - x1)</li>
+<li>Distance formula: d = sqrt((x2 - x1)^2 + (y2 - y1)^2)</li>
+</ul>
+</fieldset>
+<br>
+<p><small>&copy; School District Mathematics Department 2026</small></p>
+</div>
+<div id="main-app" style="display:none;">
+<div id="page-fade-overlay" class="page-fade-overlay"></div>
+<div id="bg-layer" class="bg-layer"></div>
+<div class="viewport-wrap">
+<main id="main-card" class="main-card">
+<nav class="card-nav" id="card-nav">
+<button class="nav-btn active" data-tab="home" id="nav-home"></button>
+<button class="nav-btn" data-tab="lib" id="nav-lib"></button>
+<button class="nav-btn" data-tab="about" id="nav-about"></button>
+<button class="nav-btn" data-tab="settings" id="nav-settings"></button>
+</nav>
+<div class="card-content">
+<section id="view-home" class="tab-view active">
+<div id="home-greeting" class="home-greeting"></div>
+<h1 class="brand-title" id="brand-title"></h1>
+<div class="hub-list">
+<button class="hub-item" data-goto="lib">
+<span class="hub-icon lib-icon">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+<path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zm-12 6h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/>
+</svg>
+</span>
+<div class="hub-text">
+<span class="hub-name" id="hub-lib-name"></span>
+<span class="hub-sub" id="hub-lib-sub"></span>
+</div>
+</button>
+<button class="hub-item" data-goto="settings">
+<span class="hub-icon set-icon">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+<path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+</svg>
+</span>
+<div class="hub-text">
+<span class="hub-name" id="hub-settings-name"></span>
+<span class="hub-sub" id="hub-settings-sub"></span>
+</div>
+</button>
+<button class="hub-item" data-goto="about">
+<span class="hub-icon abt-icon">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+</svg>
+</span>
+<div class="hub-text">
+<span class="hub-name" id="hub-about-name"></span>
+<span class="hub-sub" id="hub-about-sub"></span>
+</div>
+</button>
+</div>
+</section>
+<section id="view-lib" class="tab-view">
+<div class="lib-topbar">
+<div class="lib-heading">
+<span class="lib-title" id="lib-heading"></span>
+<span class="lib-count" id="cnt"></span>
+</div>
+<div class="lib-search">
+<input type="text" id="srch" class="search-input" autocomplete="off">
+</div>
+</div>
+<div class="lib-grid" id="ggrid"></div>
+</section>
+<section id="view-about" class="tab-view">
+<div class="section-header">
+<h2 id="about-hdr"></h2>
+</div>
+<div class="about-card">
+<p class="about-intro" id="about-intro"></p>
+<ul id="about-list">
+<li id="about-li-1"></li>
+<li id="about-li-2"></li>
+<li id="about-li-3"></li>
+</ul>
+</div>
+</section>
+<section id="view-settings" class="tab-view">
+<div class="section-header">
+<h2 id="settings-hdr"></h2>
+</div>
+<div class="settings-group">
+<div class="setting-title-row">
+<h3 id="set-hdr-sfx"></h3>
+<label class="toggle-switch">
+<input type="checkbox" id="sfx-toggle-chk" checked>
+<span class="slider"></span>
+</label>
+</div>
+</div>
+<div class="settings-group">
+<div class="setting-title-row">
+<h3 id="set-hdr-music"></h3>
+<label class="toggle-switch">
+<input type="checkbox" id="music-toggle-chk" checked>
+<span class="slider"></span>
+</label>
+</div>
+<div class="music-status-row">
+<span id="music-track-name" class="music-track-name"></span>
+<button id="btn-skip-track" class="tiny-btn"></button>
+</div>
+</div>
+<div class="settings-group">
+<div class="setting-title-row">
+<h3 id="set-hdr-alias"></h3>
+</div>
+<div class="alias-settings-row">
+<input type="text" id="settings-alias-input" class="settings-text-input" maxlength="20" autocomplete="off">
+<button id="btn-save-settings-alias" class="tiny-btn"></button>
+</div>
+</div>
+<div class="settings-group">
+<div class="setting-title-row">
+<h3 id="set-hdr-wallpaper"></h3>
+</div>
+<div class="bg-picker-grid" id="bg-picker"></div>
+</div>
+<div class="settings-group">
+<div class="setting-title-row">
+<h3 id="set-hdr-mascot"></h3>
+<label class="toggle-switch">
+<input type="checkbox" id="char-toggle-chk" checked>
+<span class="slider"></span>
+</label>
+</div>
+<div class="char-picker-grid" id="char-picker"></div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<div id="typewriter-toast" class="typewriter-toast" hidden>
+<span id="typewriter-text" class="typewriter-text"></span>
+<span class="typewriter-cursor">_</span>
+</div>
+<div id="welcome-modal-overlay" class="popup-overlay" hidden>
+<div id="welcome-modal" class="popup-box">
+<div class="popup-header">
+<h3 id="welcome-hdr"></h3>
+</div>
+<div class="popup-body">
+<p id="welcome-sub"></p>
+<form id="alias-form" class="alias-form" onsubmit="return false;">
+<input type="text" id="welcome-alias-input" class="alias-input" maxlength="20" autofocus autocomplete="off">
+<button type="submit" id="btn-submit-alias" class="popup-btn"></button>
+</form>
+</div>
+</div>
+</div>
+<div id="intro-popup-overlay" class="popup-overlay" hidden>
+<div id="intro-popup" class="popup-box">
+<div class="popup-header">
+<h3 id="intro-hdr"></h3>
+</div>
+<div class="popup-body">
+<p id="intro-sub"></p>
+<ul id="intro-list">
+<li id="intro-li-1"></li>
+<li id="intro-li-2"></li>
+<li id="intro-li-3"></li>
+</ul>
+<button id="btn-popup-close" class="popup-btn"></button>
+</div>
+</div>
+</div>
+<aside id="mascot-box" class="mascot-box">
+<img id="mascot-img" class="mascot-img" src="" alt="">
+</aside>
+<div id="gmfrm" class="gm-frm" hidden>
+<div id="slbar" class="sl-bar">
+<span id="gmtit" class="sl-tit"></span>
+<button id="togfs" class="sl-btn"></button>
+<button id="cgf" class="sl-btn sl-exit"></button>
+</div>
+<div id="sltrg" class="sl-trg"></div>
+<iframe id="frem" class="gm-frem" allow="fullscreen"></iframe>
+</div>
+</div>
+</body>
+</html>
